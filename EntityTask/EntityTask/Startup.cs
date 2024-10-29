@@ -45,9 +45,9 @@ namespace EntityTask
             services.AddAutoMapper(typeof(Startup));
             services.AddAutoMapper(typeof(MappingProfile));
 
-            services.AddIdentity<UserIdentity, IdentityRole>()
-                .AddEntityFrameworkStores<AppDbContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<UserIdentity, IdentityRole>()
+            //    .AddEntityFrameworkStores<AppDbContext>()
+            //    .AddDefaultTokenProviders();
 
             services.AddSwaggerGen(c =>
             {
@@ -56,6 +56,9 @@ namespace EntityTask
 
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            services.AddScoped<IProductServices, ProductServices>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

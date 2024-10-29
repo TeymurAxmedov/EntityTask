@@ -3,6 +3,7 @@ using EntityTask.DATA.Entity;
 using EntityTask.DTO;
 using EntityTask.Model.Repository.Interfaces;
 using EntityTask.Model.Services.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 using System.Threading.Tasks;
 
 namespace EntityTask.Model.Services.Impl
